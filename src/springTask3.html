@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Title</title>
+    <style type="text/css">
+        .main {
+        }
+        .content {
+            background-color: #A9B6B9;
+            border: 2px solid;
+            border-radius: 10px;
+        }
+
+        .table {
+            display: flex;
+            width: 80%;
+            height: 160px;
+            padding: 20px;
+        }
+
+        .inputs {
+            height: 45px;
+            width: 280px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body id="body">
+
+<div id="main" class="main">
+    <br> <br> <br> <br> <br> <br>
+    <div class="content">
+        <table class="table">
+            <tr>
+                <th><h4>Insert sum:</h4></th>
+                <th><h4></h4></th>
+                <th><h4>KZT(tenge)</h4></th>
+                <th><h4>USD(dollor)</h4></th>
+                <th><h4>EUR(euro)</h4></th>
+            </tr>
+            <tr>
+
+                <td><input id="kz_inp" class="inputs" type="number" name="kz_input"></td>
+                <td><select id="select" class="select" style="height: 45px;">
+                    <option>KZT</option>
+                    <option>USD</option>
+                    <option>EUR</option>
+                </select></td>
+                <td><input id="1kzt" class="inputs" disabled></td>
+                <td><input class="inputs" disabled id="1usd"></td>
+                <td><input class="inputs" disabled id="1eur"></td>
+            </tr>
+
+        </table>
+    </div>
+</div>
+<script type="text/javascript">
+    const selectElement2 = document.querySelector('.select');
+    const selectElement = document.getElementById('kz_inp');
+    selectElement.addEventListener('change', (event) => {
+        const result = document.getElementById('1usd');
+        const result2 = document.getElementById('1eur');
+        const result3 = document.getElementById('1kzt');
+        if (selectElement2.value === "KZT") {
+            result.value = event.target.value / 431;
+            result2.value = event.target.value / 509;
+            result3.value = 0;
+        } else if (selectElement2.value === "USD") {
+            result3.value = event.target.value * 429;
+            result2.value = event.target.value / 1.187;
+            result.value = 0;
+        } else {
+            result3.value = event.target.value * 507;
+            result.value = event.target.value * 1.177;
+            result2.value = 0;
+        }
+    });
+</script>
+
+</body>
+</html>
