@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        .main {
+            padding-top: 20px;
+            display: grid;
+            grid-template-rows: 60px 1fr;
+            grid-template-columns: 20% 80%;
+            grid-gap: 20px;
+            grid-template-areas:"m n";
+        }
+
+        .navbar{
+            height: 25px;
+            padding: 10px;
+            background-color: #426DC8;
+            display: flex;
+        }
+        .logo{
+            width: 40%;
+        }
+
+        .menu{
+            grid-area: m;
+            background-color: #CBCFD5;
+
+        }
+        .logoButton{
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+
+        .content{
+            background-color: #CBCFD5;
+            grid-area: n;
+            width: 80%;
+            border-radius: 10px;
+            height: 800px;
+        }
+        .search{
+            padding-bottom: 10px;
+            height: 30px;
+            background-color: #C9CCD3 ;
+            border: 2px solid #676F80;
+            border-radius: 20px;
+            padding: 10px;
+        }
+        .mainContent{
+            background-color:  #CBCFD5;
+            display: grid;
+            grid-template-rows: 60px 1fr;
+            grid-template-columns: 30% 70%;
+            grid-gap: 20px;
+            grid-template-areas:"left right";
+        }
+        .leftContent{
+            background-color: #CBCFD5;
+            grid-area: left;
+            border-radius: 10px;
+            height: 100%;
+        }
+        .rightContent{
+            background-color:  #CBCFD5;
+            grid-area: right;
+            border-radius: 10px;
+            height: 100%;
+        }
+
+        .profile{
+            margin-bottom: 20px;
+            background-color: white;
+            border-radius: 10px;
+            height: 320px;
+        }
+        .friends{
+            height: 280px;
+            border-radius: 10px;
+            padding-top: 20px;
+            background-color: white;
+        }
+        .person{
+            margin-bottom: 20px;
+            background-color: white;
+            border-radius: 10px;
+            height: 300px;
+        }
+        .images{
+            height: 180px;
+            border-radius: 10px;
+            padding-top: 20px;
+            background-color: white;
+        }
+        .posts{
+            margin-top: 20px;
+            height: 250px;
+            border-radius: 10px;
+            padding-top: 20px;
+            background-color: white;
+        }
+        .avatar{
+            padding: 20px;
+            width: 60%;
+        }
+        .infors{
+            display: flex;
+            padding-left: 10px;
+            width: 80%;
+            height: 20px;
+
+        }
+        .item{
+            height: 20px;
+            padding-left: 40px;
+        }
+        .menuItem{
+            padding-left: 140px;
+            padding-bottom: 20px;
+            text-decoration: none;
+        }
+        .sslka{
+            text-decoration: none;
+        }
+        .imgItems{
+            display: flex;
+            padding-left: 15px;
+            margin-bottom: 30px;
+
+
+        }
+    </style>
+</head>
+<body style="margin: 0px; font-family: Arial; background-color: #CBCFD5;">
+<div >
+    <div class="navbar">
+        <div class="logo" style="margin-left: 140px; width:70%">
+            <a href="#" class="logoButton">
+                <strong>VK</strong>
+            </a>
+        </div>
+        <div  style="margin-right: 840px">
+            <input class="search" placeholder="search" type="search" name="">
+        </div>
+    </div>
+    <div class="main">
+        <div class="menu">
+            <div class="menuItem">
+                <a href="" class="sslka">My profile</a>
+            </div>
+            <div class="menuItem">
+                <a href="" class="sslka">News</a>
+            </div>
+            <div class="menuItem">
+                <a href="" class="sslka">Messages</a>
+            </div>
+            <div class="menuItem">
+                <a href="" class="sslka">Friends</a>
+            </div>
+            <div class="menuItem">
+                <a href="" class="sslka">Groups</a>
+            </div>
+            <div class="menuItem">
+                <a href="" class="sslka">Images</a>
+            </div>
+            <div class="menuItem">
+                <a href="" class="sslka">Music</a>
+            </div>
+            <div class="menuItem">
+                <a href="" class="sslka">Video</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="mainContent">
+                <div class="leftContent">
+
+                    <div class="profile">
+                        <div class="avatar">
+                            <img style="height: 70%; " src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUeyHpXZfl-_DnR3OgpU0c7UDM0JZ74p7Vnw&usqp=CAU">
+                        </div>
+                        <div class="edit" >
+                            <button style="  background-color: #CBCFD5;color: black; border: 2px solid #CBCFD5; height: 35px;
+								width: 200px;margin-left: 30px; margin-bottom: 20px; border-radius: 5px;">Redaktirovat </button>
+                        </div>
+                    </div>
+                    <div class="friends">
+                        <div style="padding-left:20px"><strong>Friends 225</strong></div>
+                        <br>
+                        <div style="display:flex; padding-left:10px">
+                            <div> <img style="border-radius: 30px; padding-left: 10px;" width="55" height="55" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqR2GFIgqpSmVEl_VtTLbA85ZPRCJ5lJD36Q&usqp=CAU"><p  style="padding-left:20px">Berik</p></div>
+                            <div> <img style="border-radius: 30px;padding-left: 10px;" width="55" height="55" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX6q3657-6SObNg12RWZs2W1zpZVA-fkC8GA&usqp=CAU"><p  style="padding-left:20px">Erjan</p></div>
+                            <div> <img style="border-radius: 30px;padding-left: 10px;" width="55" height="55" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqxXFcI1CTL5b0H0tc60zsUASg0MeCuK-j5tc3ZX7CNSszsO-Z04LZmBmYJhZuAIHkgYU&usqp=CAU"><p style="padding-left:20px">Serik</p></div>
+
+                        </div>
+                        <div style="display:flex; padding-left:10px">
+                            <div> <img style="border-radius: 30px; padding-left: 10px;" width="55" height="55" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBvMawWs9D6FXLrvEQSOYZ549KNGo4mBQCvQ&usqp=CAU"><p  style="padding-left:20px">Aijan</p></div>
+                            <div> <img style="border-radius: 30px;padding-left: 10px;" width="55" height="55" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlNoVYRgtNQNyOfDysnrLQEY-TZcgYmVba2Q&usqp=CAU"><p  style="padding-left:20px">Marat</p></div>
+                            <div> <img style="border-radius: 30px;padding-left: 10px;" width="55" height="55" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpPBh-6_iF_ek0tx8VT7BcUJISpCXIUJj9bA&usqp=CAU"><p style="padding-left:20px">Talgat</p></div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="rightContent">
+                    <div>
+                        <div class="person">
+                            <div class="personNS" style="display: flex; height: 30px;">
+                                <!-- <p style="padding-left: 10px; padding-top:10px;"><strong>Ilyas Zhuayshev        </strong>       online</p>
+                                <p>life is good :)</p> -->
+                                <div style="height: 20px; padding-left: 10px;">
+                                    <p style="font-size: 20px;">Ilyas Zhuanyshev</p>
+                                </div>
+                                <div style="margin-left:380px">
+                                    <p style="text-align: right;">online</p>
+                                </div>
+                            </div>
+                            <div style="margin-bottom: 20px; padding-left: 10px;">
+                                <p>life is good :)</p>
+                            </div>
+                            <hr >
+                            <div class="personInfo" style="margin-bottom:20px">
+                                <div class="infors">
+                                    <div> <p>Birthday:</p> </div> <div style="margin-left:150px"> <p>26 may 1989 y</p></div>
+                                </div>
+                                <div class="infors">
+                                    <div><p>City:</p></div> <div style="margin-left:180px"><p>Almaty</p></div>
+                                </div>
+                                <div class="infors">
+                                    <div><p>Famaly info :</p></div> <div style="margin-left:120px"><p>Jenat</p></div>
+                                </div>
+                                <div class="infors">
+                                    <div><p>joob location:</p></div> <div style="margin-left:120px"><p>BITLAB academy</p></div>
+                                </div>
+                                <div class="infors">
+                                    <div><p>WebSite:</p></div> <div style="margin-left:150px"><p>http://www.zhuanyshev.kz</p></div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="personStatic" style="padding-left: 10px; display:flex; height:40px">
+                                <div class="item"><div style="height:12px"><h3>2312</h3></div> <div ><p>friends</p></div></div>
+                                <div class="item"><div style="height:12px"><h3>222</h3></div> <div><p>followers</p></div></div>
+                                <div class="item"><div style="height:12px"><h3>95</h3></div> <div><p>images</p></div></div>
+                                <div class="item"><div style="height:12px"><h3>969</h3></div> <div><p>videos</p></div></div>
+                                <div class="item"><div style="height:12px"><h3>809</h3></div> <div><p>audios</p></div></div>
+                                <div class="item"><div style="height:12px"><h3>140</h3></div> <div><p>pages</p></div></div>
+                            </div>
+                        </div>
+                        <div class="images" >
+                            <div style="height:20px; padding-left: 20px;padding-bottom: 10px;"><p>My images 95</p></div>
+                            <div class="imgItems">
+                                <div style="padding-left:20px"><img width="120" height="120" src="https://icdn.lenta.ru/images/2023/01/05/00/20230105002337030/square_1280_7e700e74a8efa459219bc6b47213bb10.jpg"></div>
+                                <div style="padding-left:20px"><img width="120" height="120" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoLMOuJ4KureO-Nl8DrK0B6ifMSiydI3re6g&usqp=CAU"></div>
+                                <div style="padding-left:20px"><img width="120" height="120" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCZcfYfotdmnkaRjVC0Tl3OTnXIsSMl5zErw&usqp=CAU"></div>
+                                <div style="padding-left:20px"><img width="120" height="120" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1fyC1fhpfAJ_Z2FJ1GSfUj1rChEulKt3wcg&usqp=CAU"></div>
+
+
+                            </div>
+                        </div>
+                        <div class="posts">
+                            <div style="display:flex; padding-left:20px">
+                                <div> <img style="border-radius: 30px;" width="50" height="50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUeyHpXZfl-_DnR3OgpU0c7UDM0JZ74p7Vnw&usqp=CAU"></div>
+
+                                <div style="padding-left:20px">
+                                    <strong>Ilyas Zhuanyshev</strong>
+                                    <p>5 april in 17:45</p>
+                                </div>
+                            </div>
+                            <div style="padding:20px"><p>Криштиа́ну Рона́лду душ Са́нтуш Аве́йру[1][b] (порт. Cristiano Ronaldo dos Santos Aveiro; европейский португальский: [kɾiʃˈtjɐnu ʁoˈnaɫdu] (Звук слушать); род. 5 февраля 1985, Фуншал) — португальский футболист, нападающий, капитан саудовского клуба «Ан-Наср» и сборной Португалии.
+
+                                Лучший бомбардир в истории футбола по данным МФФИИС и четвёртый по данным RSSSF, самый результативный футболист на уровне сборных[11], а также испанского клуба.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
