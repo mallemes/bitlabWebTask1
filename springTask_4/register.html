@@ -1,0 +1,129 @@
+<html lang="en">
+<head>
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="margin: 0; font-family: Arial, serif;">
+<div class="content">
+    <div class="navbar">
+        <div class="logo">
+            <a href="#" class="logoButton">
+                <strong>TWITTER</strong>
+            </a>
+        </div>
+        <div class="navMenu">
+            <a href="#" class="menuButton">Tweets</a>
+            <a href="login.html" class="menuButton">Login</a>
+            <a href="register.html" class="menuButton">Register</a>
+        </div>
+    </div>
+
+    <div class="main">
+        <div>
+            <form class="registerForm" method="post" id="form" action="login.html">
+                <h3 class="error" id="error"></h3>
+                <div class="field">
+                    <div>
+                        <label for="email">EMAIL:</label>
+                    </div>
+                    <div class="input">
+                        <input type="text" name="email" id="email">
+                    </div>
+                </div>
+                <div class="field">
+                    <div>
+                        <label for="password">PASSWORD:</label>
+                    </div>
+                    <div class="input">
+                        <input type="password" name="email" id="password">
+                    </div>
+                </div>
+                <div class="field">
+                    <div>
+                        <label for="fullName">FULL NAME:</label>
+                    </div>
+                    <div class="input">
+                        <input type="text" name="email" id="fullName">
+                    </div>
+                </div>
+                <div class="field">
+                    <div>
+                        <label for="country">COUNTRY:</label>
+                    </div>
+                    <div class="input">
+                        <select name="country" id="country">
+                            <option> Kazakhstan</option>
+                            <option> Russia</option>
+                            <option> China</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="field">
+                    <div>
+                        <label for="birthday">BIRTHDAY:</label>
+                    </div>
+                    <div class="input">
+                        <input type="date" name="email" id="birthday">
+                    </div>
+                </div>
+                <div class="field">
+                    <div>
+                        <button id="submit" class="submitButton">REGISTER</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+<script>
+    if (!localStorage.users) {
+        const users = []
+        localStorage.setItem("users", JSON.stringify(users))
+    }
+    const error = document.getElementById('error')
+    document.getElementById('form').onsubmit = () => {
+        const email = document.getElementById('email').value
+        const password = document.getElementById('password').value
+        const fullName = document.getElementById('fullName').value
+        const country = document.getElementById('country').value
+        const birthday = document.getElementById('birthday').value
+
+        if (email && password && fullName && country && birthday) {
+            const user = {email, password, fullName, country, birthday};
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            const currentUser = users.filter(user => user.email === email)
+            if (!currentUser[0]) {
+                pushToUsers(user);
+            } else {
+
+                error.innerText = "Email уникалды болу керек"
+                return false
+            }
+        } else {
+            error.innerText = "Барлық жолдарды толтырыңыз"
+            return false
+        }
+    }
+
+    const pushToUsers = (user) => {
+        let users;
+        users = JSON.parse(localStorage.getItem('users')) || [];
+        users.push(user);
+        localStorage.setItem('users', JSON.stringify(users));
+    }
+    // const a  = document.getElementById('submit')
+    // a.addEventListener('click', ()=>{
+    //    alert(document.getElementById('email').value)
+    // })
+    // let selectElement2 = document.querySelectorAll('.input');
+    // var a = selectElement2[0].getElementById('email')
+    // console.log(selectElement2[0].innerText)
+    // selectElement2[0].addEventListener('change', (e)=>{
+    //     console.log(e.target.value);
+    //     console.log(selectElement2[0].value)
+    // })
+
+</script>
+</body>
+</html>
