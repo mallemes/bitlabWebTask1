@@ -1,0 +1,60 @@
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #02058b;
+    padding: 20px;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    justify-content: space-around;
+}
+
+.news {
+    width: 25%;
+}
+
+.posts {
+    width: 50%;
+}
+
+.profile {
+    width: 20%;
+    border: 1px solid #6d8469;
+}
+
+.tag-a {
+    text-decoration: none;
+    color: #BCD0FD;
+}
+
+.show-btn {
+    background-color: #02058b;
+    color: #BCD0FD;
+    border: none;
+    height: 30px;
+}
+
+.post-content {
+    padding: 10px;
+}
+
+.profile-button {
+    border: 2px solid #6d8469;
+    padding: 10px;
+}
+
+.news-item {
+    border: 2px solid #BCD0FD;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.news-title {
+    display: flex;
+    justify-content: space-between;
+}
